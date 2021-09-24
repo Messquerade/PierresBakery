@@ -9,5 +9,10 @@ namespace Bakery.Models
     {
       TotalPastries = numberOfPastries;
     }
+
+    public int GetPastryCost()
+    {
+      return 1;
+    }
   }
 }
