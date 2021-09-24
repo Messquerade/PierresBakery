@@ -47,13 +47,17 @@ A parent class that holds Bread and Pastry as child classes? Abstract class? Use
 
 Constructor builds with a property of number of loaves. (Extend to include different kinds of bread: sourdough, honey wheat, potato buttermilk)
 
-method GetBreadCost()
+Bread constructor (input)
 input is an integer, number of loaves (integer is a positive number, no larger than 100.
 You don't want customers putting in a massive order without making sure the bakery can produce that amount.
 Any orders over 100 should display an email for the bakery so the customer can contact the bakery and arrange an extra large order.
-Depending on the size of the bakery, number of employees, number of orders etc. this upper limit will be higher or lower)
-output is an integer, cost of bread order
-To calculate the cost of the bread order, every 3rd loaf of bread is free
+Depending on the size of the bakery, number of employees, number of orders etc. this upper limit will be higher or lower)  
+input saved as a TotalLoaves property
+
+method GetBreadCost()
+called on Bread object to access TotalLoaves
+output is an integer, cost of bread order  
+To calculate the cost of the bread order, every 3rd loaf of bread is free  
 One bread loaf costs $5.00
 
 #### Inputs/Outputs
