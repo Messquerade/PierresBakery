@@ -25,7 +25,7 @@ This console app will welcome the user to Pierre's Bakery and display the cost a
 
 ## Known Bugs
 
-* _No know issues_
+* _Orders of over 100 total baked goods are accepted instead of directed to bakery's email_
 
 ## License
 
