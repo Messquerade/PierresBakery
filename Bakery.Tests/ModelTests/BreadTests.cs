@@ -19,5 +19,12 @@ namespace Bakery.Models.Tests
       Bread testBread = new Bread(0);
       Assert.AreEqual(0, testBread.GetBreadCost());
     }
+
+    [TestMethod]
+    public void GetBreadCost_CalculateTenLoavesCost_35()
+    {
+      Bread testBread = new Bread(10);
+      Assert.AreEqual(35, testBread.GetBreadCost());
+    }
   }
 }
