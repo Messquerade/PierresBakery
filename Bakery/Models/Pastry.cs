@@ -12,7 +12,9 @@ namespace Bakery.Models
 
     public int GetPastryCost()
     {
-      return TotalPastries;
+      int factor = TotalPastries / 3;
+      int result = (TotalPastries * 2) - factor;
+      return result;
     }
   }
 }
