@@ -12,7 +12,9 @@ namespace Bakery.Models
 
     public int GetBreadCost()
     {
-      return TotalLoaves;
+      int factor = TotalLoaves / 3;
+      int result = (TotalLoaves * 5) - (factor * 5);
+      return result;
     }
 
   }
