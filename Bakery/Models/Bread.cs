@@ -10,5 +10,10 @@ namespace Bakery.Models
       TotalLoaves = numberOfLoaves;
     }
 
+    public int GetBreadCost()
+    {
+      return 1;
+    }
+
   }
 }
