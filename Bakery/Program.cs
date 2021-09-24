@@ -97,28 +97,40 @@ namespace Bakery
 
     public static void Main()
     {
-      bool quit = false;
       Console.WriteLine("Welcome to Pierre's Bakery! We offer a fresh selection of bread and pastries baked in house daily. Enter q at anytime to quit.");
       Console.WriteLine("Bread costs $5.00 per loaf. Now offering our special deal: every third loaf is free!");
       Console.WriteLine("Pastries cost $2.00 each. Now offering our special deal: every third pastry is half off!");
       Console.WriteLine("For orders over 100 baked goods, please email pierre@pierrebakery.com");
+
       int breadCost = BreadOrder();
-      Console.WriteLine("The total cost of your bread order is $" + breadCost + ".00");
-      int pastryCost = PastryOrder();
-      Console.WriteLine("The total cost of your pastry order is $" + pastryCost + ".00");
-      int totalCost = breadCost + pastryCost;
-      Console.WriteLine("The total cost of your bakery order is $" + totalCost + ".00");
-      Console.WriteLine("To Confirm your order enter y, to change it enter n");
-      string confrimResponse = Console.ReadLine().ToLower();
-      if (confrimResponse == "y")
+      if (breadCost == -1)
       {
-        Console.WriteLine("Thank you. Your order has been submitted. Please come again!");
-      } else if (confrimResponse == "n")
-      {
-        Main();
+        Console.WriteLine("Thank you for visiting Pierre's Bakery! Please come again!");
       } else
       {
-        Console.WriteLine("Your order has been cancelled. Please come again!");
+        Console.WriteLine("The total cost of your bread order is $" + breadCost + ".00");
+        int pastryCost = PastryOrder();
+        if (pastryCost == -1)
+        {
+          Console.WriteLine("Thank you for visiting Pierre's Bakery! Please come again!");
+        } else
+        {
+          Console.WriteLine("The total cost of your pastry order is $" + pastryCost + ".00");
+          int totalCost = breadCost + pastryCost;
+          Console.WriteLine("The total cost of your bakery order is $" + totalCost + ".00");
+          Console.WriteLine("To Confirm your order enter y, to change it enter n");
+          string confrimResponse = Console.ReadLine().ToLower();
+          if (confrimResponse == "y")
+          {
+            Console.WriteLine("Thank you. Your order has been submitted. Please come again!");
+          } else if (confrimResponse == "n")
+          {
+            Main();
+          } else
+          {
+            Console.WriteLine("Your order has been cancelled. Please come again!");
+          }
+        }
       }
     }
   }
