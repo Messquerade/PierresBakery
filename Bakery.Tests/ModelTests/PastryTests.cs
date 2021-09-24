@@ -27,6 +27,17 @@ namespace Bakery.Models.Tests
       Assert.AreEqual(7, testPastry.GetPastryCost());
     }
 
-
+    [TestMethod]
+    public void GetPastryCost_CalulateFivePastryCost_9()
+    {
+      Pastry testPastry = new Pastry(5);
+      Assert.AreEqual(9, testPastry.GetPastryCost());
+    }
+    [TestMethod]
+    public void GetPastryCost_CalulateSixPastryCost_10()
+    {
+      Pastry testPastry = new Pastry(6);
+      Assert.AreEqual(10, testPastry.GetPastryCost());
+    }
   }
 }
