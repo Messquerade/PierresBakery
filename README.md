@@ -14,12 +14,22 @@
 
 This console app will welcome the user to Pierre's Bakery and display the cost and deals for bread and pastries. It will accept an input of number of bread loaves and pastries from the user, calculate the cost of the user's order, and display that cost to the user.
 
-## Setup/Installation Requirements
+## Installation Requirements
 
 * Clone this repository to your desktop
 * Open in text editor
 * Make sure you have .Net version 5.0 installed
-* In your terminal, navigate into Bakery.Solution/Bakery/
+* In your terminal, run $ dotnet restore, to build obj and bin folders
+
+## Testing
+
+* To test, navigate into Bakery.Solution/Bakery.Tests/
+* run $ dotnet test
+
+## Setup
+
+* Navigate into Bakery.Solution/Bakery/
+* run command $ dotnet build
 * run command $ dotnet run
 * follow console instructions to use application
 

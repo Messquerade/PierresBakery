@@ -7,14 +7,29 @@ namespace Bakery.Models.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void BreadConstructorTest()
+    public void ConstructorTest_CheckType_Bread()
+    {
+      Bread testBread = new Bread(26);
+      Assert.AreEqual(typeof(Bread), testBread.GetType());
+    }
+
+    [TestMethod]
+    public void GetTotalLoaves_ReturnNumberOfLoaves_Int()
     {
       Bread testBread = new Bread(26);
       Assert.AreEqual(26, testBread.TotalLoaves);
     }
 
     [TestMethod]
-    public void GetBreadCost_CalulateZeroLoafCost_0()
+    public void SetTotalLoaves_ReturnUpdatedLoaves_Int()
+    {
+      Bread testBread = new Bread(26);
+      testBread.TotalLoaves = 27;
+      Assert.AreEqual(27, testBread.TotalLoaves);
+    }
+
+    [TestMethod]
+    public void GetBreadCost_CalculateZeroLoafCost_0()
     {
       Bread testBread = new Bread(0);
       Assert.AreEqual(0, testBread.GetBreadCost());
