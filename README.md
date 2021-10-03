@@ -19,18 +19,18 @@ This console app will welcome the user to Pierre's Bakery and display the cost a
 * Clone this repository to your desktop
 * Open in text editor
 * Make sure you have .Net version 5.0 installed
-* In your terminal, run $ dotnet restore, to build obj and bin folders
+* In your terminal, run $ dotnet restore, to install obj and bin folders
 
 ## Testing
 
 * To test, navigate into Bakery.Solution/Bakery.Tests/
-* run $ dotnet test
+* run $ dotnet test, to check passing tests
 
 ## Setup
 
 * Navigate into Bakery.Solution/Bakery/
-* run command $ dotnet build
-* run command $ dotnet run
+* run command $ dotnet build, to build the program
+* run command $ dotnet run, to run the app in your console
 * follow console instructions to use application
 
 ## Known Bugs
